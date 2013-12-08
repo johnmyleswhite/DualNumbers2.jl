@@ -1,4 +1,4 @@
-module DualNumbers
+module DualNumbers2
 
 importall Base
 
