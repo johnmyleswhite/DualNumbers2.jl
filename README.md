@@ -10,7 +10,7 @@ Note that a call to ``g!`` essentially has the cost of ``2n`` evaluations of ``f
 
 The generated gradient function can be used with Optim:
 ```
-using DualNumbers
+using DualNumbers2
 using Optim
 
 
