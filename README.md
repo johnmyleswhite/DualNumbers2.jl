@@ -6,7 +6,7 @@ The primary interface is ``autodiff1_wrapper``, which generates a function that 
 
 The method works by passing a vector of dual numbers (``Dual1{T}``) to ``f`` in place of a ``Vector{T}``. This means that ``f`` must be written generically. Only a few methods have been overloaded so far to support dual numbers, so you may encounter errors related to this.
 
-Note that a call to ``g!`` essentially has the cost of ``n`` evaluations of ``f``, while central differencing requires ``2n`` evaluations. However, ``g!`` will return an *exact* numerical derivative, within floating-point error, not an approximation.
+Note that a call to ``g!`` essentially has the cost of ``2n`` evaluations of ``f``, like central differencing. Unlike finite differencing, however, ``g!`` will return an *exact* numerical derivative within floating-point error, not an approximation.
 
 The generated gradient function can be used with Optim:
 ```
