@@ -1,5 +1,11 @@
 # DualNumbers
 
+# NOTICE
+
+**This package is unmaintained. Its reliability is not guaranteed.**
+
+# Introduction
+
 This is a proof of concept implementation of (forward) automatic differentiation in Julia via operator overloading. Immutable types make this approach particularly efficient, with no temporary allocations needed.
 
 The primary interface is ``autodiff1_wrapper``, which generates a function that evaluates the gradient of a given function. It's signature is ``autodiff1_wrapper(f, T, n)``, where ``f(x::Vector{T})`` is a function that takes a vector of type T of length ``n``. It returns a function ``g!(x,storage)`` where the gradient is written *in-place* to the vector ``storage``. 
